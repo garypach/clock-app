@@ -1,0 +1,29 @@
+.mainbutton {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 28px;
+    /* identical to box height, or 175% */
+    
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    
+    color: #000000;
+    
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    border: 0;
+    border-radius: 3em;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+  }
+  .mainbutton--primary {
+    color: white;
+    background-color: #1ea7fd;
+    font-size: 16px;
+    padding: 12px 24px;
+  }
