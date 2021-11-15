@@ -6,12 +6,18 @@ import './time.css';
  * Primary UI component for user interaction
  */
 export const Time = (props) => {
+  
   return (
-        <div>
-        <div>
-            {props.time}
+        <div className="time-cont time-cont-active">
+        <div className="time">
+          <div className="time-number">
+          {props.time}
+          </div>
+          <div className="time-abbreviation">
+          {props.abbreviation}
+            </div>
          </div>
-         <div>
+         <div className="location">
             {props.location}
          </div>
         </div>

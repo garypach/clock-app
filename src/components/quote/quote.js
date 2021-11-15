@@ -1,22 +1,53 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './quote.css';
-
+import { useState,useEffect } from 'react';
+import { MainButton } from '../MainButton/MainButton';
 /**
  * Primary UI component for user interaction
  */
 export const Quote = (props) => {
+  const [quote,setQuote] = useState([]);
+  const [error, setError] = useState(null);
+
+  // Note: the empty deps array [] means
+  // this useEffect will run once
+  // similar to componentDidMount()
+  const randomQuote = ()=> {
+    fetch(`https://api.quotable.io/random`)
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setQuote(result);
+          console.log(result.results)
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          setError(error);
+        }
+      )
+  }
+
+  useEffect (()=>{
+    randomQuote();
+  },[]);
+
+
   return (
-      <div>
-        <div>
-        <div>
-            {props.quote}
+      <div className="quote-cont">
+        <div className="quote-author">
+        <div className="quote">
+            {quote.content}
          </div>
-         <div>
-            {props.author}
+         <div className="author">
+         {quote.author}
          </div>
         </div>
-        <div> </div>
+        <div className="refresh-button">
+          <MainButton onClick={randomQuote} label="new quote"/>
+        </div>
     </div>
  
    

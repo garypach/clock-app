@@ -6,7 +6,7 @@ import './infobox.css';
  */
 export const InfoBox = (props) => {
   return (
-    <div className="infobox-cont">
+    <div className={props.active}>
       <div className="infobox">
         <div className="info-left">
           <div className="info-left-top">

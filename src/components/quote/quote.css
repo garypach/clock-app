@@ -1,0 +1,36 @@
+.quote-cont{
+    position: absolute;
+    top: 0;
+    color: white;
+    width: 324px;
+    height: 97px;
+    width: 100%;
+    display: flex;
+    padding: 25px;
+}
+.quote-author{
+    display: flex;
+    flex-direction: column;
+    max-width: 290px;
+}
+
+.quote{
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 22px;
+}
+
+.author{
+    font-family: Inter;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 22px;
+}
+.refresh-button{
+    width:10%;
+    height: 18px;
+    text-align: left;
+}

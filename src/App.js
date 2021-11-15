@@ -1,24 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import HomeImage from '../src/components/HomeImage/HomeImage';
+import imagedaytimemobile from './assets/mobile/bg-image-daytime.jpg';
+// import imagedaytimetablet from './assets/mobile/bg-image-daytime.jpg';
+// import imagedaytimedesktop from './assets/mobile/bg-image-daytime.jpg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <HomeImage image={imagedaytimemobile}/>
     </div>
+    
   );
 }
 

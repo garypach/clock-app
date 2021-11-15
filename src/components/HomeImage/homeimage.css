@@ -1,0 +1,32 @@
+.background-image{
+    width: 100%;
+    min-width: 320px;
+    position: relative;
+    max-width: 458px;
+    background: #000000;
+mix-blend-mode: normal;
+    overflow: hidden;
+
+}
+
+.background-image img{
+    min-width: 320px;
+    filter:saturate(1.2);
+    opacity: .6;
+    height: 100vh;
+    object-fit:cover;
+    width: 100%;
+    max-width: 458px;
+mix-blend-mode: normal;
+
+}
+.body-cont{
+    position: absolute;
+    transition: .4s ease-in-out;
+    bottom: 37px;
+    left: 26px;
+}
+.body-cont-active{
+    left: 28px;
+    bottom: 295px;
+}
